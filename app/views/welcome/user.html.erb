@@ -1,7 +1,9 @@
 <h2 data-controller="user">
   <%= @user.username %>
-  <%= link_to "Follow", "#", class: "btn btn-secondary btn-medium",
-                               data: { action: "user#follow",
-                                       user: @user.id,
-                                       target: "user.followButton" } %>
+  <%= link_to "#", class: "btn btn-secondary btn-medium",
+                    data: { action: "user#follow",
+                            user: @user.id,
+                            target: "user.followButton" } do %>
+    <%= (user_signed_in? && current_user.follow?(@user)) ? "Followed" : "Follow" %>
+  <% end %>
 </h2>

@@ -10,9 +10,12 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = [ "output" ]
-
-  connect() {
-    this.outputTarget.textContent = 'Hello, Stimulus!'
+  static targets = [ "followButton" ]
+  
+  follow(event) {
+    event.preventDefault()
+    
+    let user = this.followButtonTarget.dataset.user
+    console.log(user)
   }
 }

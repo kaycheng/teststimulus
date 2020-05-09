@@ -1,0 +1,7 @@
+<h2 data-controller="user">
+  <%= @user.username %>
+  <%= link_to "Follow", "#", class: "btn btn-secondary btn-medium",
+                               data: { action: "user#follow",
+                                       user: @user.id,
+                                       target: "user.followButton" } %>
+</h2>

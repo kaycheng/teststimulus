@@ -1,13 +1,13 @@
 <h1>Welcome</h1>
 
+
+  <% @users.each do |user| %>
+    <h2><%= link_to user.username, user_page_path(user.username) %></h2>
+  <% end %>
+
+
+
 <% if current_user %>
-  <h2 data-controller="user">
-    <%= current_user.username %>
-    <%= link_to "Follow", "#", class: "btn btn-secondary btn-medium",
-                               data: { action: "user#follow",
-                                       user: current_user.id,
-                                       target: "user.followButton" } %>
-  </h2>
   <%= link_to "Log out", destroy_user_session_path, method: :delete, 
                          data: { confirm: "Are you sure?" } %>
 <% else %>

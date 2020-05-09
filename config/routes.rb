@@ -10,5 +10,9 @@ Rails.application.routes.draw do
       post :follow
     end
   end
+
+  # /@username
+  get '@:username', to: 'welcome#user', as: 'user_page'
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

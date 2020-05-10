@@ -1,24 +1,31 @@
-# README
+# TestStimulus
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+TestStimulus is a simple website to try stimulus function. Using user can follow other users to make follow action. 
 
-Things you may want to cover:
+## Tech/Framework used
 
-* Ruby version
+**Built with**
 
-* System dependencies
+* [Ruby on Rails 6.0.3](http://rubyonrails.org/) 
+* [Ruby 2.6](https://www.ruby-lang.org/en/) 
 
-* Configuration
+## Installation
 
-* Database creation
+To clone and run this application, you'll need [Git](https://git-scm.com/) and [Ruby on Rails](http://rubyonrails.org/) installed on your computer. From your command line:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Clone this repository
+```
+$ git clone https://github.com/kaycheng/teststimulus.git
+```
+### Go into the repository
+```
+$ cd teststimulus
+```
+### Install dependencies
+```
+$ bundle install
+```
+### Run the app
+```
+$ foreman start
+```
